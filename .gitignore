@@ -1,0 +1,12 @@
+.classpath
+.project
+console.properties
+settings/
+.settings
+bin/
+Libs/
+Reports/
+Materials/
+Storage/
+.gradle/
+Drivers/
