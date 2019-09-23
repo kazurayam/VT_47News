@@ -1,19 +1,21 @@
+
 import java.nio.file.Path
 
 import com.kazurayam.materials.Indexer
 import com.kazurayam.materials.IndexerFactory
 import com.kazurayam.materials.MaterialRepository
 import com.kazurayam.materials.ReportsAccessor
+import com.kazurayam.materials.view.ParallelIndexer
 import com.kazurayam.visualtesting.ManagedGlobalVariable as MGV
 
 import internal.GlobalVariable as GlobalVariable
 
 /**
  * Test Cases/VT/makeIndex
- * 
+ *
  * This test case creates ./Materials/index.html file.
  * The index.html shows the result of screenshots comparison tests.
- * 
+ *
  * This test case just read files from the local file system and write a file into the local file system.
  * This test case makes no interaction with web.
  */
@@ -26,8 +28,8 @@ Path baseDir          = mr.getBaseDir()
 Path reportsDir       = ra.getReportsDir()
 Path index            = baseDir.resolve('index.html')
 
-// create an Indexer object
-Indexer indexer = IndexerFactory.newIndexer()
+// create an ParallelIndexer object
+Indexer indexer = new ParallelIndexer()
 indexer.setBaseDir(baseDir)
 indexer.setReportsDir(reportsDir)
 indexer.setOutput(index)
