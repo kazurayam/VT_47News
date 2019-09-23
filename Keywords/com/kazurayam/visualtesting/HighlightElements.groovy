@@ -65,9 +65,10 @@ return rect.x + "," + rect.y + "," + rect.width + "," + rect.height;
 				sb.append(',')
 			}
 			sb.append('{')
-			sb.append('\"')
+			sb.append('\"objectId\":\"')
 			sb.append(key)
-			sb.append('\":')
+			sb.append('\",')
+			sb.append('\"DOMRect\":')
 			sb.append(val)
 			sb.append('}')
 			count++
