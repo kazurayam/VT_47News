@@ -43,7 +43,7 @@ WebUI.comment("saved image into ${png1}")
 
 WebUI.closeBrowser()
 
-Path highlight = png1.getParent().resolve('TOP.highlight')
+Path highlight = png1.getParent().resolve('TOP.highlight.json')
 lighter.writeLog(highlight)
 
 
