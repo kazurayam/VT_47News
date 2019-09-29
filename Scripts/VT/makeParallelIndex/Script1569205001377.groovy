@@ -5,7 +5,6 @@ import com.kazurayam.materials.Indexer
 import com.kazurayam.materials.IndexerFactory
 import com.kazurayam.materials.MaterialRepository
 import com.kazurayam.materials.ReportsAccessor
-import com.kazurayam.materials.view.ParallelIndexer
 import com.kazurayam.visualtesting.ManagedGlobalVariable as MGV
 
 import internal.GlobalVariable as GlobalVariable
@@ -29,7 +28,7 @@ Path reportsDir       = ra.getReportsDir()
 Path index            = baseDir.resolve('index.html')
 
 // create an ParallelIndexer object
-Indexer indexer = new ParallelIndexer()
+Indexer indexer = IndexerFactory.newIndexer('com.kazurayam.materials.view.IndexerParallel')
 indexer.setBaseDir(baseDir)
 indexer.setReportsDir(reportsDir)
 indexer.setOutput(index)
